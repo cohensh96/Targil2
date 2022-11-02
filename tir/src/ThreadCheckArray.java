@@ -82,6 +82,7 @@ public class ThreadCheckArray implements Runnable
 				winArray[array.size() - 1] = true;
 			synchronized (sd) 
 			{
+				System.out.println("the winner thread is: "+ Thread.currentThread().getName());
 				sd.setWinArray(winArray);
 			}	
 		}
