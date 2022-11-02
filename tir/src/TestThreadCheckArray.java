@@ -1,3 +1,7 @@
+import java.time.Duration;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,6 +19,9 @@ public class TestThreadCheckArray {
 			
 			System.out.println("Enter number");
 			num = input.nextInt();
+			
+			
+			Instant start = Instant.now(); /////
 			
 			SharedData sd = new SharedData(array, num);
 			
@@ -36,6 +43,10 @@ public class TestThreadCheckArray {
 				System.out.println("Sorry");
 				return;
 			}
+			
+			Instant end = Instant.now(); //////
+			Duration timeElapsed = Duration.between(start, end);
+			
 			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().size());
 			System.out.print("I:    ");
 			for(int index = 0; index < sd.getArray().size() ; index++)
@@ -66,6 +77,10 @@ public class TestThreadCheckArray {
 				else
 					System.out.print("0    ");	
 			}
+			
+			System.out.println();
+			System.out.println("Time taken: "+ timeElapsed.toMillis() +" milliseconds");
+			
 		}
 	}
 
