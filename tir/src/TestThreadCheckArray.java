@@ -4,8 +4,18 @@ import java.time.Instant;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Scanner;
-//
+
 public class TestThreadCheckArray {
+	/**
+	 * The method initializes an integer arrayList with the wanted size and elements of user,
+	 * * The method searches for combination of sums from the array that equal to the given @param number.
+	 * 
+	 * @param sharedData
+	 * Sets and gets necessary flags, also runs the threads to find the wanted sum.
+	 * 
+	 */
+	
+	
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
 			Thread thread1, thread2;
